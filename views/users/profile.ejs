@@ -1,0 +1,28 @@
+<% include ../layout/header %>
+
+<div class="row" style="margin: 0px; margin-top: 20px; position: relative;">
+    <div class="col-md-3" style="float: none; margin: 0 auto; box-shadow: 0px 0px 4px #847f7f; padding-bottom: 25px; padding-top: 15px; height: 345px">
+        <div class="page-header" style="margin: 20px 0 20px;">
+            <h1 style="text-align: center">My profile</h1>
+        </div>
+        <div class="col-md-12" style="padding: 0px">
+            <div class="col-md-5">
+                <img style="width: 100%" src="/images/anonymous.jpg">
+            </div>
+            <div class="col-md-7">
+                <p>First name: <%= userInfo.firstName %></p>
+                <p>Last name: <%= userInfo.lastName %></p>
+                <p>Email: <%= userInfo.emailAddress %></p>
+            </div>
+            <form class="form-horizontal" method="POST" action="/users/logout">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <button style="width: 100%; margin-top: 20px" type="submit" name="submitLogout" class="btn btn-danger" value="submit">Log out</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include ../layout/footer %>

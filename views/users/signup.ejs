@@ -1,0 +1,43 @@
+<% include ../layout/header %>
+
+<div class="row" style="margin: 0px; margin-top: 20px; position: relative;">
+    <div class="col-md-3" style="float: none; margin: 0 auto; box-shadow: 0px 0px 4px #847f7f; padding-bottom: 25px; padding-top: 15px;">
+        <div class="page-header" style="margin: 20px 0 20px;">
+            <h1 style="text-align: center">Signup form</h1>
+        </div>
+        <form class="form-horizontal" method="POST">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input id="emailAddress" name="emailAddress" type="text" placeholder="Email address" class="form-control" value="<%= infoForm.emailAddress %>">
+                    <p class="error"><%= errorForm.emailAddress %></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input id="password" name="password" type="password" placeholder="Password" class="form-control" value="<%= infoForm.password %>">
+                    <p class="error"><%= errorForm.password %></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input id="firstName" name="firstName" type="text" placeholder="First name" class="form-control" value="<%= infoForm.firstName %>">
+                    <p class="error"><%= errorForm.firstName %></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input id="lastName" name="lastName" type="text" placeholder="Last name" class="form-control" value="<%= infoForm.lastName %>">
+                    <p class="error"><%= errorForm.lastName %></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button style="width: 100%" type="submit" name="submitSignup" class="btn btn-info" value="submit">Sign up</button>
+                </div>
+            </div>
+            <a style="text-align: center; cursor: pointer" href="/users/login"><i class="glyphicon glyphicon-arrow-left"></i> Go to login page</a>
+        </form>
+    </div>
+</div>
+
+<% include ../layout/footer %>
